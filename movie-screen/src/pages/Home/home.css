@@ -1,0 +1,27 @@
+.lista-filmes{
+    max-width: 800px;
+    margin: 14px auto;
+}
+
+.lista-filmes article{
+    width: 100%;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 4px;
+}
+.lista-filmes strong{
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 25px;
+}
+
+.lista-filmes img{
+
+    width: 300px;
+    max-width: 100%;
+    max-height: 340%;
+    object-fit: cover;
+
+}

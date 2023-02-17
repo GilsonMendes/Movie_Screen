@@ -1,6 +1,8 @@
-import { wait } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
+import { Link } from "react-router-dom";
+import "./home.css"
+
 
 // url: /movie/changes?api_key=7469f64c97c650cc947bf31db5f7915a
 
@@ -34,6 +36,8 @@ function Home() {
                             <strong>
                                 {filme.title}
                             </strong>
+                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt = {filme.title}/>
+                            <Link to={`/filmes${filme.id}`}>Acessar</Link>
                         </article>
                     )
 
