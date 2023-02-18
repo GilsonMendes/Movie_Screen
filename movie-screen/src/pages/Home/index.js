@@ -8,6 +8,7 @@ import "./home.css"
 
 function Home() {
     const [filmes, setFilmes] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
 
@@ -20,11 +21,19 @@ function Home() {
             })
 
             setFilmes(response.data.results.slice(0, 10))
+            setLoading(false);
         }
 
         loadFilmes();
 
     }, [])
+    if (loading) {
+        return (
+            <div>
+                <h2> Caregando Filmes..... </h2>
+            </div>
+        )
+    }
     return (
         <div className="container">
             <div className="lista-filmes">
@@ -36,8 +45,15 @@ function Home() {
                             <strong>
                                 {filme.title}
                             </strong>
-                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt = {filme.title}/>
-                            <Link to={`/filmes${filme.id}`}>Acessar</Link>
+
+                            <div className="imagens">
+                                <img
+                                    src={
+                                        `https://image.tmdb.org/t/p/original/${filme.poster_path}`
+                                    } alt={filme.title}
+                                />
+                            </div>
+                            <Link to={`/pages/Filmes/${filme.id}`}>Acessar</Link>
                         </article>
                     )
 
