@@ -53,7 +53,7 @@ function Home() {
                                     } alt={filme.title}
                                 />
                             </div>
-                            <Link to={`/pages/Filmes/${filme.id}`}>Acessar</Link>
+                            <Link to={`/Filme/${filme.id}`}>Acessar</Link>
                         </article>
                     )
 
