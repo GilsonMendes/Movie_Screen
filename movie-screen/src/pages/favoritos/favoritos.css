@@ -1,0 +1,33 @@
+.meus-favoritos {
+    margin: 10px;
+}
+
+.meus-favoritos h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.meus-favoritos span{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.meus-favoritos ul{
+    width: 720px;
+    margin: 10px;
+
+}
+
+.meus-favoritos ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.meus-favoritos a{
+    text-decoration: none;
+    margin-right: 10px;
+}
