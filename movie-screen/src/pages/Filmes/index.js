@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api';
 import "./filmes_styles.css"
+import { toast } from 'react-toastify';
 function Filmes() {
     const { id } = useParams();
     const [filme, setFilmes] = useState({});
@@ -40,14 +41,14 @@ function Filmes() {
         )
 
         if (hasFilme) {
-            alert("ESSE FILTE JÁ ESTA NA LISTA!");
+            toast.warn("ESSE FILTE JÁ ESTA NA LISTA!");
             return;
         }
         filmesSalvos.push(filme);
         localStorage.setItem("@meusfilmes",
             JSON.stringify(filmesSalvos)
         );
-        alert("FILME SALVO COM SUCESSO!")
+        toast.success("FILME SALVO COM SUCESSO!")
     }
     if (loading) {
         return (
