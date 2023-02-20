@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./home.css"
 
 
+
 // url: /movie/changes?api_key=7469f64c97c650cc947bf31db5f7915a
 
 function Home() {
@@ -53,7 +54,7 @@ function Home() {
                                     } alt={filme.title}
                                 />
                             </div>
-                            <Link to={`/Filme/${filme.id}`}>Acessar</Link>
+                            <Link style={{color: '#FFF'}} to={`/Filme/${filme.id}`}>Acessar</Link>
                         </article>
                     )
 
